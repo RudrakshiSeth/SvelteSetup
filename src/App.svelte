@@ -1,30 +1,96 @@
 <script>
-	export let name;
+
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<header>
+		<h2>Patient Portal</h2>
+		<img  src='/images/profile.png' id="Profile">
+		<img src='images/logo.png' id ="icon" >
+	</header>
+	<div id="container">
+		<div class="box1"><h1>Lab Results</h1></div>
+		<div class="box2"><h1>Med Results</h1></div>
+		<div class="box3"><h1>Dia Results</h1></div>
+		<span class="stretch"></span>
+	  </div>
+	<footer>
+		<h3>Ehealth</h3>
+	</footer>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+/* Style the header */
+header {
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  background:linear-gradient(rgba(6, 163, 236, 0.582),rgba(15, 98, 136, 0.356));
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+
+}
+#icon{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+#Profile{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;  
+}
+#container {
+  border: 2px #444;
+  height: 125px;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  /* just for demo */
+  min-width: 612px;
+}
+
+.box1,
+.box2,
+.box3{
+  padding: 50px;
+  width: 300px;
+  height: 300px;
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  zoom: 1
+}
+
+.stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0
+}
+
+.box1{
+	background: rgb(131, 21, 21)
+}
+.box3 {
+  background: #ccc
+}
+
+.box2 {
+  background: #0ff
+}
+footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/ 
+            height: 50px;
+			background:linear-gradient(rgba(6, 163, 236, 0.582),rgba(15, 98, 136, 0.356));
+			color: white;
+			text-align: center;
+        }
+
 </style>
