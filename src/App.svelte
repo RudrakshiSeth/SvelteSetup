@@ -9,9 +9,17 @@
 		<img src='images/logo.png' id ="icon" >
 	</header>
 	<div id="container">
-		<div class="box1"><h1>Lab Results</h1></div>
-		<div class="box2"><h1>Med Results</h1></div>
-		<div class="box3"><h1>Dia Results</h1></div>
+		<div class="box1">
+      <a href="Labs.svelte" target="_blank"><h1>Lab Results</h1></a>
+    </div>
+		<div class="box2">
+      <a href="medication.svelte" target="_blank"><h1>Med Results</h1></a>
+    </div>
+		<div class="box3">
+      
+      <a href="Diagnosis.svelte" target="_blank"><h1>Dia Results</h1></a>
+    
+    </div>
 		<span class="stretch"></span>
 	  </div>
 	<footer>
@@ -55,13 +63,22 @@ header {
 .box1,
 .box2,
 .box3{
-  padding: 50px;
-  width: 300px;
-  height: 300px;
+  padding: 80px;
+  width: 200px;
+  height: 200px;
+  margin-top: 7%;
+  text-align: center;
   vertical-align: top;
   display: inline-block;
   *display: inline;
   zoom: 1
+}
+#lab {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin:auto;
+  
 }
 
 .stretch {
@@ -72,7 +89,9 @@ header {
 }
 
 .box1{
-	background: rgb(131, 21, 21)
+
+  background: #ccc
+
 }
 .box3 {
   background: #ccc
