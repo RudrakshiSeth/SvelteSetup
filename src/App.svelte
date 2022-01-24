@@ -9,13 +9,13 @@
 		<img src='images/logo.png' id ="icon" >
 	</header>
 	<div id="container">
-		<div class="box1">
+		<div class="lab">
       <a href="Labs.svelte" target="_blank"><h1>Lab Results</h1></a>
     </div>
-		<div class="box2">
+		<div class="med">
       <a href="medication.svelte" target="_blank"><h1>Med Results</h1></a>
     </div>
-		<div class="box3">
+		<div class="dia">
       
       <a href="Diagnosis.svelte" target="_blank"><h1>Dia Results</h1></a>
     
@@ -60,9 +60,9 @@ header {
   min-width: 612px;
 }
 
-.box1,
-.box2,
-.box3{
+.lab,
+.med,
+.dia{
   padding: 80px;
   width: 200px;
   height: 200px;
@@ -71,14 +71,10 @@ header {
   vertical-align: top;
   display: inline-block;
   *display: inline;
-  zoom: 1
-}
-#lab {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin:auto;
-  
+  zoom: 1;
+  background-size:     cover;      
+  background-repeat:   no-repeat;
+  background-position: center center;   
 }
 
 .stretch {
@@ -88,24 +84,23 @@ header {
   line-height: 0
 }
 
-.box1{
+.lab{
 
-  background: #ccc
-
+  background-image:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),url('/images/lab.jpeg');
 }
-.box3 {
-  background: #ccc
+.dia {
+  background-image:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),url('/images/diagnosis.jpeg');
 }
 
-.box2 {
-  background: #0ff
+.med {
+  background-image:linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),url('/images/med.jpeg');
 }
 footer {
             position: fixed;
             padding: 10px 10px 0px 10px;
             bottom: 0;
             width: 100%;
-            /* Height of the footer*/ 
+          
             height: 50px;
 			background:linear-gradient(rgba(6, 163, 236, 0.582),rgba(15, 98, 136, 0.356));
 			color: white;
